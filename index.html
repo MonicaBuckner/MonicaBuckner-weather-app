@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-of-page">
+            <h1 class="current-location" id="place">
+                Seattle, United States
+            </h1>
+
+            <div class="search-bar">
+                <form id="change-location">
+                    <input type="location" placeholder="Change location" autocomplete="off" autofocus="on"
+                        id="location-input" />
+                    <input type="submit" />
+                </form>
+            </div>
+        </div>
+
+        <h4 class="date-and-time" id="day-date">Friday October 9
+        </h4>
+        <h5>2:17 PM PST</h5>
+
+
+        <div class="current-weather">
+            <p class="weather-emoji"> <img src="Images/sun.jpg" alt="Sun">
+            </p>
+            <p>
+            <ul class="high-low-precip"> <strong>
+                    <li id="condition">Sunny
+                        <span id="currentTemp">
+                            60
+                        </span>
+                        <span id="units">
+                            ° F
+                        </span>
+                    </li>
+                    <li>High: <span id="highTemp">66</span>° F </li>
+                    <li>Low: <span id="lowTemp">54</span>° F</li>
+                </strong>
+            </ul>
+            </p>
+        </div>
+
+        <div class="forecast">
+            <div class="row">
+                <div class="col-2 day-one>
+        <div class=" class">
+                    <div class="card" style="width: 10rem;">
+                        <img src="Images/Partly-sunny.png" class="card-img-top" alt="Sunshine">
+                        <div class="card-body">
+                            <h5 class="card-title">Saturday
+                                <hr />
+                                <div class="weather-condition">Sunny</div>
+                            </h5>
+                            <p class="card-text">High: 66° F <br>Low: 54° F</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 day-two">
+                <div class="class">
+                    <div class="card" style="width: 10rem;">
+                        <img src="Images/Cloudy.jpg" class="card-img-top" alt="Sunshine">
+                        <div class="card-body">
+                            <h5 class="card-title">Sunday
+                                <hr>
+                                <div class="weather-condition">Sunny</div>
+                            </h5>
+                            <p class="card-text">High: 66° F <br>Low: 54° F</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 day-three">
+                <div class="class">
+                    <div class="card" style="width: 10rem;">
+                        <img src="Images/Rain.png" class="card-img-top" alt="Sunshine">
+                        <div class="card-body">
+                            <h5 class="card-title">Monday
+                                <hr>
+                                <div class="weather-condition">Sunny</div>
+                            </h5>
+                            <p class="card-text">High: 66° F <br>Low: 54° F</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 day-four">
+                <div class="class">
+                    <div class="card" style="width: 10rem;">
+                        <img src="Images/Sun-and-rain.png" class="card-img-top" alt="Sunshine">
+                        <div class="card-body">
+                            <h5 class="card-title">Tuesday
+                                <hr>
+                                <div class="weather-condition">Sunny</div>
+                            </h5>
+                            <p class="card-text">High: 66° F <br>Low: 54° F</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 day-five">
+                <div class="class">
+                    <div class="card" style="width: 10rem;">
+                        <img src="Images/Windy.png" class="card-img-top" alt="Sunshine">
+                        <div class="card-body">
+                            <h5 class="card-title">Wednesday
+                                <hr>
+                                <div class="weather-condition">Sunny</div>
+                            </h5>
+                            <p class="card-text">High: 66° F <br>Low: 54° F</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 day-six">
+                <div class="class">
+                    <div class="card" style="width: 10rem;">
+                        <img src="Images/Snow.jpg" class="card-img-top" alt="Sunshine">
+                        <div class="card-body">
+                            <h5 class="card-title">Thursday
+                                <hr>
+                                <div class="weather-condition">Sunny</div>
+                            </h5>
+                            <p class="card-text">High: 66° F <br>Low: 54° F</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 day-seven">
+                <div class="class">
+                    <div class="card" style="width: 10rem;">
+                        <img src="Images/Lightning.jpg" class="card-img-top" alt="Sunshine">
+                        <div class="card-body">
+                            <h5 class="card-title">Friday
+                                <hr>
+                                <div class="weather-condition">Sunny</div>
+                            </h5>
+                            <p class="card-text">High: 66° F <br>Low: 54° F</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>Coded by Monica Buckner</footer>
+
+    </div>
+
+    <script src="src/index.js"></script>
+</body>
+
+</html>
